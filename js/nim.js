@@ -1,8 +1,3 @@
-minimumPossibleGrab = 2;
-maximumPossibleGrab = 3;
-
-
-
 class Player {
     constructor(name, human) {
         if(name == undefined || human == undefined) {
@@ -15,21 +10,28 @@ class Player {
 
 }
 
+const minimumPossibleGrab = 2;
+const maximumPossibleGrab = 3;
+
+
 class Nim {
 
     constructor(player1, player2, victory, total, maxGrab) {
-        if(maxGrab === undefined) {
+        if (maxGrab === undefined) {
             maxGrab = 3;
         }
-        if(maxGrab >= minimumPossibleGrab && maxGrab <= maximumPossibleGrab) {
-            throw "'maxGrab' has to be greater than " + (minimumPossibleGrab - 1) + " less than " + (maximumPossibleGrab + 1);
+        if (maxGrab <= minimumPossibleGrab && maxGrab >= maximumPossibleGrab) {
+            //throw "'maxGrab' has to be greater than " + (minimumPossibleGrab - 1) + " and less than " + (maximumPossibleGrab + 1);
         }
-        
         if (player1.human === false && player2.human === false) {
             throw "No players are human";
         }
 
-        if(total < 12) {
+        if (player1 == player2) {
+            throw "Player superposition error detected";
+        }
+
+        if (total < 12) {
             throw "Invalid amount of marbles";
         }
         
