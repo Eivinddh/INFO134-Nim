@@ -1,27 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
     <link rel="stylesheet" href="css/index.css"/>
     <meta charset="UTF-8">
     <title>Nim</title>
-    <h1>Nim</h1>
     </head>
-    <body>
+     <body>
+        <div class="flex-container">
+            <img src="css/assets/nim.jpg">
+            <form id="gameSettings" action="/action_page.php">
+                <span> First player: </span> <br>
+                <input type="text" name="player1"><br>
+                <br>
+                <span> Second player: </span> <br>
+                <input type="text" name="player2"><br>
+                <br>
+                <span> Amount of marbles: </span><br>
+                <input type="text" name="nMarbles"><br>
+                <br>
+                <span> Maximum grab: </span><br>
+                <input type="text" name="maxGrab"><br><br>
+                <br>
+                <span>
+                    <input type="button" onclick='(() => { location.href = "game.html"; })();' value="Start game">
+                </span>
+            </form>
+            </img>
+        </div>
 
-    
-        <!-- JavaScript references -->
+        <!-- JavaScript references (visuals load first) -->
         <script type="text/javascript" src="js/nim.js"></script>
         <script type="text/javascript" src="js/game.js"></script>
-
-        <div class="flex-container">
-        <form id="gameSettings" action="/action_page.php">
-            Player1 name: <input type="text" name="player1"><br>
-            Player2 name: <input type="text" name="player2"><br>
-            nMarbles    : <input type="text" name="nMarbles"><br>
-            MaxGrab     : <input type="text" name="maxGrab"><br><br>
-            <input type="button" onclick='(() => { location.href = "game.html"; })();' value="Start game">
-        </form>
-        </div>
 
     </body>
 </html>

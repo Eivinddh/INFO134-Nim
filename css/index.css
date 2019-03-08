@@ -1,11 +1,90 @@
 /*@media screen and (min-width: 800px){}*/
 
+body{
+  /* Aesthetics */
+  font-family: Cambria;
+  background-color: whitesmoke;
+  /* Burde endres */
+  background-image: url(https://i.pinimg.com/originals/b8/30/d7/b830d74da2ba788593943097aec0868e.png);
+}
+
+/* for index.html */
 .flex-container {
   display: flex;
   justify-content: center;
+  align-items: column;
 }
 
-body {
+img {
+  border-radius: 40px;
+}
+
+img:hover{
+  opacity: 0.4;
+}
+
+/*
+.nimImg{
+  background-image: url(assets/nim.jpg);
+}
+
+.nimImg:hover{
+  opacity: 0.4;
+}
+
+*/
+
+input{
+  border-radius: 4px;
   font-family: Cambria;
-  background-color: WhiteSmoke;
+  text-align: center;
+}
+
+
+span{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/** for game.html */
+.outline {
+  
+  display: flex;
+  justify-content: center;
+  align-content:center;
+}
+
+.marbleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: row;
+  width: 600px;
+  height: 300px;
+}
+
+
+.marble{
+  /*display: flex;
+  flex-direction: row;*/
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  box-shadow: inset -25px -25px 40px rgba(0,0,0,0.5);
+  border: 1px solid black;
+  /* Makes the square into a circle */
+  border-radius: 50%; 
+  /* Burde endres */
+  background-image: url(https://images.homedepot-static.com/productImages/b198b95c-3a7c-4900-a1d4-000e8602cf21/svn/black-marble-low-gloss-trafficmaster-luxury-vinyl-tile-26321061-64_1000.jpg);
+
+}
+
+.marble:hover{
+  opacity: 0.1;
+  border: whitesmoke;
+  background-image: url(http://zencohenprojects.com/wp-content/uploads/2018/02/GradientMoon4.gif);
+  /*
+  background-image: url(https://cdn.shopify.com/s/files/1/2930/2308/products/abstract-pink-and-blue-marble-texture-backdrop-for-photography_530x@2x.jpg);
+  */
 }

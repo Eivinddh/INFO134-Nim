@@ -7,7 +7,6 @@ class Player {
         this.name = name;
         this.human = human;
     }
-
 }
 
 const minimumPossibleGrab = 2;
