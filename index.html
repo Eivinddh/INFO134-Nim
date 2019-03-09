@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,31 +6,7 @@
     <title>Nim</title>
     </head>
      <body>
-        <div class="flex-container">
-            <img src="css/assets/nim.jpg">
-            <form id="gameSettings" action="/action_page.php">
-                <span> First player: </span> <br>
-                <input type="text" name="player1"><br>
-                <br>
-                <span> Second player: </span> <br>
-                <input type="text" name="player2"><br>
-                <br>
-                <span> Amount of marbles: </span><br>
-                <input type="text" name="nMarbles"><br>
-                <br>
-                <span> Maximum grab: </span><br>
-                <input type="text" name="maxGrab"><br><br>
-                <br>
-                <span>
-                    <input type="button" onclick='(() => { location.href = "game.html"; })();' value="Start game">
-                </span>
-            </form>
-            </img>
-        </div>
-
-        <!-- JavaScript references (visuals load first) -->
-        <script type="text/javascript" src="js/nim.js"></script>
-        <script type="text/javascript" src="js/game.js"></script>
-
+        <img id="rules-narrow" src="css/assets/both-narrow.jpg" alt="nimnar" onclick="(() => { location.href = 'settings.html'; })();">
+        <img id="rules-wide" src="css/assets/both-wide.jpg" alt="nim"  onclick="(() => { location.href = 'settings.html'; })();">
     </body>
 </html>
