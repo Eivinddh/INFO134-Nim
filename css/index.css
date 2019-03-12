@@ -1,23 +1,23 @@
 body{
   /* Aesthetics */
   font-family: Cambria;
-  background-color: whitesmoke;
-  /* Burde endres */
-  background-image: url(https://i.pinimg.com/originals/b8/30/d7/b830d74da2ba788593943097aec0868e.png);
+  background-color: black;
+  background-image: url(assets/currentBackground.jpg);
 }
 
 /* for index.html */
 .flex-container {
   display: flex;
   justify-content: center;
-  align-items: column;
-  border-radius: 20px;
+  align-items: flex-start;
+  /**align-items: column;
+  border-radius: 20px;*/
 }
 
 img {
   width: 80%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 15px;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -34,23 +34,53 @@ img:hover{
 }
 
 input{
-  border-radius: 4px;
-  font-family: Cambria;
+  height:30px;
+  /*width: 87%;*/
+  font-size: 130%;
+  border-radius: 7px;
   text-align: center; 
+  font-size: 120%;
+  font-family: Cambria;
+  display: flex;
+  justify-content: space-between;
+/**
+  display: flex;
+  justify-content: center;
+  */
 }
-
 
 span{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  text-shadow: 5px 5px 3px black;
+  font-size: 120%;
+  color: white;
+  font-weight: italics;
 }
 
+span input{
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+/*
+.numberInput{
+  width: 40px;
+}
+*/
 
 /** for game.html */
+#gameBod{
+  display: inline;
+  box-shadow: 0 0 8px 8px white inset;
+}
 .outline {
   display: flex;
   justify-content: center;
   align-items:center;
+
 }
 
 .marbleContainer {
@@ -58,9 +88,14 @@ span{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: column;
+  /**
+  background-image: url(https://5.imimg.com/data5/LE/GE/MY-33934902/marble-500x500.jpg); 
+  box-shadow: 0px 0px 20px white;
+  */
+  border-radius: 30px;
   width: 600px;
   height: 300px;
-}
+ } 
 
 .marble{
   background-color: black;
@@ -71,16 +106,14 @@ span{
   /* Makes the square into a circle */
   border-radius: 50%; 
   /* Burde endres */
-  background-image: url(https://images.homedepot-static.com/productImages/b198b95c-3a7c-4900-a1d4-000e8602cf21/svn/black-marble-low-gloss-trafficmaster-luxury-vinyl-tile-26321061-64_1000.jpg);
+  background-image: url(assets/blackMarble.jpg);
 }
 
 .marble:hover{
-  opacity: 0.1;
+  opacity: 0.7;
   border: whitesmoke;
-  background-image: url(http://zencohenprojects.com/wp-content/uploads/2018/02/GradientMoon4.gif);
-  /*
-  background-image: url(https://cdn.shopify.com/s/files/1/2930/2308/products/abstract-pink-and-blue-marble-texture-backdrop-for-photography_530x@2x.jpg);
-  */
+  background-image:url(https://thumbs.gfycat.com/SafeFairAmericanrobin-small.gif);
+  background-image:url(https://i.imgur.com/GVDq5Wt.gif);
 }
 
 #rules-narrow{

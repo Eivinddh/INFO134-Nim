@@ -9,24 +9,24 @@
      <body>
         <img id="logo" src="css/assets/nim.jpg" alt="nim" onclick="(() => { location.href = 'index.html'; })();">
         <div class="flex-container">
+            <div class="nested-container"> 
             <form id="gameSettings" action="/action_page.php">
-                <span> First player: </span> <br>
-                <input type="text" name="player1"><br>
+
+                <span>First player: </span>
+                <input type="text" name="player1">
                 <br>
-                <span> Second player: </span> <br>
-                <input type="text" name="player2"><br>
+                <span>Second player: </span>
+                <input type="text" name="player2">
                 <br>
-                <span> Amount of marbles: </span><br>
-                <input type="text" name="nMarbles"><br>
+                <span>Amount of marbles: </span>
+                <input class="numberInput" type="text" name="nMarbles">
                 <br>
-                <span> Maximum grab: </span><br>
-                <input type="text" name="maxGrab"><br><br>
-                <span>
-                    <input id="btn" type="button" onclick='(() => { location.href = "game.html"; })();' value="Start game">
-                </span>
+                <span>Maximum grab:  </span>
+                <input class="numberInput" type="text" name="maxGrab"><br><br>
+                <span><input id="btn" type="button" onclick='(() => { location.href = "game.html"; })();' value="Start game"></span>
             </form>
             </div>
-
+            </div>
         <!-- JavaScript references (visuals load first) -->
         <script type="text/javascript" src="js/nim.js"></script>
         <script type="text/javascript" src="js/game.js"></script>
