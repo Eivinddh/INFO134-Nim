@@ -3,25 +3,25 @@ const victory = (winner) => {
     alert(winner + " won! Congratulations!"); 
 };
 
+
+var params = window.location.search.slice(1).split("&");
 var gameOfNim = undefined;
-var p1 = undefined;
-var p2 = undefined;
 
 //Text input fields where players register their desired move
 var firstPlayerMove = document.getElementById("p1Move");
 var secondPlayerMove = document.getElementById("p2Move");
 
-/**
- * Note to self: Trenger kun å overføre gameOfNimObjektet fra settings.html til game.html.
- */
-function startGame() {
-    //Instatiate game based on given information
-    p1 = new Player(document.getElementById("firstPlayer").value, true);
-    p2 = new Player(document.getElementById("secondPlayer").value, true);
-    var maxG = document.getElementById("max");
-    var amount  = document.getElementById("amount");
-    gameOfNim = new Nim(player1, player2, victory, amount, maxG);
-}
+
+//Instatiate game based on given information
+var player1Name = params[0].split("=")[1];
+var player2Name = params[1].split("=")[1];
+var marbles = params[2].split("=")[1];
+var maxGrab = params[3].split("=")[1];
+
+var p1 = new Player(player1Name, true);
+var p2 = new Player(player2Name, true);
+var gameOfNim = new Nim(p1, p2, victory, marbles, maxGrab);
+
 
 function registerMove(player){
     if(gameOfNim === undefined){
