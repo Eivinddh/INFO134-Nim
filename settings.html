@@ -10,7 +10,7 @@
         <img id="logo" src="css/assets/nim.jpg" alt="nim" onclick="(() => { location.href = 'index.html'; })();">
         <div class="flex-container">
             <div class="nested-container"> 
-            <form id="gameSettings" action="/action_page.php">
+            <form id="gameSettings" action="game.html" method="GET">
 
                 <span>First player: </span>
                 <input id="firstPlayer" type="text" name="player1">
@@ -23,7 +23,7 @@
                 <br>
                 <span>Maximum grab:  </span>
                 <input id="max" class="numberInput" type="text" name="maxGrab"><br><br>
-                <span><input id="btn" type="button" onclick="(() => { location.href = 'game.html'; })(); startGame();" value="Start game"></span>
+                <span><input id="btn" type="submit" value="Start game"></span>
             </form>
             </div>
             </div>
