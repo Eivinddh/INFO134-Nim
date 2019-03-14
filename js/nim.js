@@ -2,16 +2,14 @@ class Player {
     constructor(name, human) {
         if(name == undefined || human == undefined) {
             throw "Invalid player values";
-        }
-        
+        }  
         this.name = name;
         this.human = human;
     }
 }
 
-const minimumPossibleGrab = 2;
+const minimumPossibleGrab = 1;
 const maximumPossibleGrab = 3;
-
 
 class Nim {
 
@@ -39,11 +37,10 @@ class Nim {
         this.victory = victory;
         this.total = total;
         this.maxGrab = maxGrab;
-        
     }
 
     takeMarble (amountOfMarbles, currentPlayer) {
-        if(amountOfMarbles > maxGrab && amountOfMarbles < 1) {
+        if(amountOfMarbles > maxGrab && amountOfMarbles < 1 && amountOfMarbles > total) {
             throw "Invalid amount of marbles";
         }
         this.currentPlayer = currentPlayer;

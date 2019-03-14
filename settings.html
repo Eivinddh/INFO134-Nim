@@ -13,17 +13,17 @@
             <form id="gameSettings" action="/action_page.php">
 
                 <span>First player: </span>
-                <input type="text" name="player1">
+                <input id="firstPlayer" type="text" name="player1">
                 <br>
                 <span>Second player: </span>
-                <input type="text" name="player2">
+                <input id="secondPlayer" type="text" name="player2">
                 <br>
                 <span>Amount of marbles: </span>
-                <input class="numberInput" type="text" name="nMarbles">
+                <input id="amount" class="numberInput" type="text" name="nMarbles">
                 <br>
                 <span>Maximum grab:  </span>
-                <input class="numberInput" type="text" name="maxGrab"><br><br>
-                <span><input id="btn" type="button" onclick='(() => { location.href = "game.html"; })();' value="Start game"></span>
+                <input id="max" class="numberInput" type="text" name="maxGrab"><br><br>
+                <span><input id="btn" type="button" onclick="(() => { location.href = 'game.html'; })(); startGame();" value="Start game"></span>
             </form>
             </div>
             </div>

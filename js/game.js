@@ -1,14 +1,38 @@
-const victory = () => {
+const victory = (winner) => {
     "use strict";
-    alert("Du vant!"); 
+    alert(winner + " won! Congratulations!"); 
 };
 
-const player1 = new Player("Per", false); // TODO: Gief args
-const player2 = new Player("Ida", true); // TODO: Gief args
+var gameOfNim = undefined;
+var p1 = undefined;
+var p2 = undefined;
 
+//Text input fields where players register their desired move
+var firstPlayerMove = document.getElementById("p1Move");
+var secondPlayerMove = document.getElementById("p2Move");
 
-var gameOfNim = new Nim(player1, player2, victory, undefined, 3);
-
+/**
+ * Note to self: Trenger kun å overføre gameOfNimObjektet fra settings.html til game.html.
+ */
 function startGame() {
-    document.getElementById("myButton").onclick = undefined;
+    //Instatiate game based on given information
+    p1 = new Player(document.getElementById("firstPlayer").value, true);
+    p2 = new Player(document.getElementById("secondPlayer").value, true);
+    var maxG = document.getElementById("max");
+    var amount  = document.getElementById("amount");
+    gameOfNim = new Nim(player1, player2, victory, amount, maxG);
+}
+
+function registerMove(player){
+    if(gameOfNim === undefined){
+        throw "Game not instatiated."
+    }
+    else if(player == "p1"){
+        one = gameOfNim.player1;
+        gameOfNim.takeMarble(firstPlayerMove.value, one);
+    }
+    else{
+        two  = gameOfNim.player2;
+        gameOfNim.takeMarble(secondPlayerMove.value, two);
+    }
 }

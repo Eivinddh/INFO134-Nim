@@ -101,12 +101,13 @@ span input{
   background-color: black;
   width: 100px;
   height: 100px;
-  box-shadow: inset -25px -25px 40px rgba(0,0,0,0.5);
+  box-shadow: inset -25px -25px 40px rgba(0,0,0,0.5), 0px 0px 60px black;
   border: 1px solid black;
   /* Makes the square into a circle */
   border-radius: 50%; 
   /* Burde endres */
   background-image: url(assets/blackMarble.jpg);
+  background-image: url(https://5.imimg.com/data5/LE/GE/MY-33934902/marble-500x500.jpg);
 }
 
 .marble:hover{
