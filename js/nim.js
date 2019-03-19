@@ -44,9 +44,9 @@ class Nim {
             throw "Invalid amount of marbles";
         }
         this.currentPlayer = currentPlayer;
-        total -= amountOfMarbles;
+        this.total -= amountOfMarbles;
 
-        if(total <= 0) {
+        if(this.total <= 0) {
             victory(currentPlayer);
         }
     }

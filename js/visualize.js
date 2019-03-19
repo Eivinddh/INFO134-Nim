@@ -1,3 +1,5 @@
+updateStatus();
+
 //Help method
 function invisible(id){
     document.getElementById(id).style.visibility = "hidden";
@@ -6,16 +8,16 @@ function invisible(id){
 /**
  * Sets the visibility of the simulated marbles to hidden.
  * 
- * @param {*} totalLeft The amount of marbles left
+ * @param {*} total The amount of marbles left
  */
-function visualizeMarbles(totalLeft) {
-    if(10 == totalLeft){
+function visualizeMarbles(total) {
+    if(10 == total){
         invisible("plus");
     }
 
-    if(10 > totalLeft){
+    if(10 > total){
         invisible("plus");
-        for(i = totalLeft+1; i <= 10; i++){
+        for(i = total+1; i <= 10; i++){
             invisible("m" + i);
         }
     }
@@ -36,7 +38,8 @@ function resetValue(){
 }
 
 function updateStatus(){
-    document.getElementById(displayTotal).innerHTML = gameOfNim.totalLeft;
+    console.log(gameOfNim.total.toString());
+    document.getElementById("displayTotal").innerHTML = gameOfNim.total + "";
 }
 
 /** Is to be called after a player has registered their move to the nimGame object. 
@@ -44,12 +47,13 @@ function updateStatus(){
  *  If this method gets called, it should implicate that given values were legal (i.e. no exceptions thrown).
  */
 function visualize(curPlayer){
-    visualizeMarbles(gameOfNim.totalLeft);
+    visualizeMarbles(gameOfNim.total);
     if(curPlayer=="p1"){
         toggleButton("firstPlayerButton", "secondPlayerButton");
     }
     else{
         toggleButton("secondPlayerButton", "firstPlayerButton");
     }
-    //resetValue();
+    resetValue();
+    updateStatus();
 }

@@ -7,40 +7,40 @@
     </head>
     <body id="gameBod">
 
-        <div class="firstPlayerContainer">
-            <input type="text">
-            <!-- When the button is clicked the move is registered to nimGame object, then visualized through GUI if valid. -->
-            <input id="firstPlayerButton" type="button" value="Register move" onclick="registerMove('p1');visualize('p1');">
-        </div>
-
-
-        <!-- Current status of the game -->
-        <div class="gameStatus">
+         <div class="status">
+            <!-- Current status of the game -->
             <p> Marbles left: </p>
-            <p id="displayTotal"></p>
+            <p id="displayTotal"> Total </p>
         </div>
 
-
-        <div class="secondPlayerContainer">
-            <input id="p2Move" type="text">
-            <!-- Same functionality as the prior button -->
-            <input id="secondPlayerButton" disabled type="button" value="Register Move" onclick="registerMove('p2');visualize('p2');">
-        </div>
-
-        <div class="outline">
-            <!-- Marbles -->
-            <div class="marbleContainer"> 
-                <div class="marble" id="m1"></div>
-                <div class="marble" id="m2"></div>
-                <div class="marble" id="m3"></div>
-                <div class="marble" id="m4"></div>
-                <div class="marble" id="m5"></div>
-                <div class="marble" id="m6"></div>
-                <div class="marble" id="m7"></div>
-                <div class="marble" id="m8"></div>
-                <div class="marble" id="m9"></div>
-                <div class="marble" id="m10"></div>
-                <div class="plus" id="plus"></div>
+        <div class="container">
+            <div>
+                <input class="textMove" id="p1Move" type="text">
+                <!-- When the button is clicked the move is registered to nimGame object, then visualized through GUI if valid. -->
+                <input id="firstPlayerButton" type="button" value="Register move" onclick="registerMove('p1');visualize('p1');">
+            </div>
+           
+            <div class="outline">
+                <!-- Marbles -->
+                <div class="marbleContainer"> 
+                    <div class="marble" id="m1"></div>
+                    <div class="marble" id="m2"></div>
+                    <div class="marble" id="m3"></div>
+                    <div class="marble" id="m4"></div>
+                    <div class="marble" id="m5"></div>
+                    <div class="marble" id="m6"></div>
+                    <div class="marble" id="m7"></div>
+                    <div class="marble" id="m8"></div>
+                    <div class="marble" id="m9"></div>
+                    <div class="marble" id="m10"></div>
+                    <div class="plus" id="plus"></div>
+                </div>
+            </div>
+        
+            <div>
+                <input class="textMove" id="p2Move" type="text">
+                <!-- Same functionality as the prior button -->
+                <input id="secondPlayerButton" disabled type="button" value="Register Move" onclick="registerMove('p2');visualize('p2');">
             </div>
         </div>
         <script src="js/nim.js"></script>

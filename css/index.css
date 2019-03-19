@@ -10,8 +10,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /**align-items: column;
-  border-radius: 20px;*/
 }
 
 img {
@@ -35,7 +33,6 @@ img:hover{
 
 input{
   height:30px;
-  /*width: 87%;*/
   font-size: 130%;
   border-radius: 7px;
   text-align: center; 
@@ -43,10 +40,6 @@ input{
   font-family: Cambria;
   display: flex;
   justify-content: space-between;
-/**
-  display: flex;
-  justify-content: center;
-  */
 }
 
 span{
@@ -65,12 +58,6 @@ span input{
   font-size: 100%;
 }
 
-/*
-.numberInput{
-  width: 40px;
-}
-*/
-
 /** for game.html */
 #gameBod{
   display: inline;
@@ -80,20 +67,28 @@ span input{
   display: flex;
   justify-content: center;
   align-items:center;
+}
 
+p {
+  font-size: 150%;
+  color: white;
+  font-family: Cambria; 
+  border: white solid 2px;
+  border-radius: 10px;
+}
+
+.status{
+  display:flex;
+  justify-content:center;
 }
 
 .marbleContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: column;
-  /**
-  background-image: url(https://5.imimg.com/data5/LE/GE/MY-33934902/marble-500x500.jpg); 
-  box-shadow: 0px 0px 20px white;
-  */
   border-radius: 30px;
-  width: 600px;
+  width: 550px;
   height: 300px;
  } 
 
@@ -105,16 +100,26 @@ span input{
   border: 1px solid black;
   /* Makes the square into a circle */
   border-radius: 50%; 
-  /* Burde endres */
-  background-image: url(assets/blackMarble.jpg);
   background-image: url(https://5.imimg.com/data5/LE/GE/MY-33934902/marble-500x500.jpg);
+}
+
+.plus{
+  background-image: url(http://pngimg.com/uploads/plus/plus_PNG107.png);
+}
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .marble:hover{
   opacity: 0.7;
   border: whitesmoke;
-  background-image:url(https://thumbs.gfycat.com/SafeFairAmericanrobin-small.gif);
   background-image:url(https://i.imgur.com/GVDq5Wt.gif);
+}
+
+.textMove{
+  width:130px;
 }
 
 #rules-narrow{
@@ -125,11 +130,10 @@ span input{
   display: flex;
 }
 
-
 @media screen and (max-width: 800px){
   .marbleContainer {
     height: 600px;
-    width: 300px;
+    width: 240px;
   }
 
   #rules-narrow{
