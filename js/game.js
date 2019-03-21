@@ -1,6 +1,6 @@
 const victory = (winner) => {
     "use strict";
-    alert(winner + " won! Congratulations!"); 
+    alert(winner.name + " won! Congratulations!"); 
 };
 
 
